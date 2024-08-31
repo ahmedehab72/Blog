@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- <link rel="stylesheet" href="main.css" /> -->
+    <link
+      rel="preload"
+      href="main.css"
+      as="style"
+      onload="this.rel='stylesheet'"
+    />
+
+    <title>Task Four</title>
+  </head>
+  <body>
+    <!-- navbar  -->
+    <header>
+      <nav class="header">
+        
+        <h1>My Advanced Blog</h1>
+        <i class="fa-solid fa-bars toggle"></i>
+        <div class="nav-links">
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+          <a href="#">Portfolio</a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- home page  -->
+    <main>
+      <section class="container mt-5">
+        <div class="row">
+          <!-- content in left of page -->
+          <div class="col-md-8 left">
+            <article class="post">
+              <h2>First Advanced Article Title</h2>
+              <p>
+                This is some sample text for the first article. The full content
+                of the article could be displayed here. Feel free to add more
+                content and style it as needed.
+              </p>
+              <button class="btn btn-primary">Read More</button>
+            </article>
+            <article class="post">
+              <h2>Second Advanced Article Title</h2>
+              <p>
+                This is some sample text for the second article. The full
+                content of the article could be displayed here. Experiment with
+                different layouts and design enhancements.
+              </p>
+              <button class="btn btn-primary">Read More</button>
+            </article>
+            <article class="post">
+              <h2>Third Advanced Article Title</h2>
+              <p>
+                This is some sample text for the third article. Challenge
+                yourself to add more features and make the blog more interactive
+                and user-friendly.
+              </p>
+              <button class="btn btn-primary">Read More</button>
+            </article>
+          </div>
+          <!-- content in right of page -->
+          <aside class="col-md-4 right">
+            <div class="sidebar">
+              <h3>About the Blog</h3>
+              <p>
+                This blog is more advanced, requiring enhancements and
+                restructuring. Consider adding more sections and making it
+                dynamic with JavaScript.
+              </p>
+              <h3>Useful Links</h3>
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About the Author</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Portfolio</a></li>
+              </ul>
+            </div>
+            <div class="sidebar">
+              <h3>Recent Posts</h3>
+              <ul>
+                <li><a href="#">How to Improve Your Blog</a></li>
+                <li><a href="#">Understanding CSS Grid</a></li>
+                <li><a href="#">10 JavaScript Tips and Tricks</a></li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </section>
+      <!-- Scroll Button -->
+      <button id="scrollUp" class="btn btn-danger">
+        <i class="fa-solid fa-arrow-up"></i>
+      </button>
+
+    </main>
+    <!-- footer -->
+  
+    <footer>
+        <h2>Contact Us</h2>
+        <form id="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="index.js"></script>
+  </body>
+</html>

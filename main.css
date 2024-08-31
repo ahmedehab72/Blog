@@ -1,0 +1,214 @@
+:root {
+  --primary-color: #007bff;
+  --secondary-color: hsl(211, 100%, 35%);
+  --background-color: #f4f4f9;
+  --white-color: white;
+  --footer-color: #343a40;
+  --sidebar-color: #f8f9fa;
+  --border-color: #ddd;
+  --boxshadow-color: rgba(0, 0, 0, 0.1);
+  --boxshadow2-color: rgba(0, 0, 0, 0.2);
+  --background-footer: #86b5e7;
+  --hover-color: #e0e0e0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--background-color);
+}
+.header {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  padding: 40px 0;
+  text-align: center;
+  position: relative;
+}
+.header::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 5px;
+  background-color: var(--white-color);
+}
+.nav-links {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.nav-links a {
+  color: var(--white-color);
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.nav-links a:hover {
+  text-decoration: underline;
+}
+.post {
+  border: 1px solid var(--border-color);
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: var(--white-color);
+  box-shadow: 0 4px 8px var(--boxshadow-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.post:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px var(--boxshadow2-color);
+}
+.post h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+.post p {
+  color: #666;
+  line-height: 1.6;
+}
+.post .btn-primary {
+  background-color: var(--primary-color);
+  border: none;
+}
+.post .btn-primary:hover {
+  background-color: var(--secondary-color);
+}
+.sidebar {
+  background-color: var(--sidebar-color);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px var(--boxshadow-color);
+  margin-bottom: 20px;
+}
+.sidebar h3 {
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+.sidebar ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+.sidebar ul li {
+  margin-bottom: 10px;
+}
+.sidebar ul li a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+.sidebar ul li a:hover {
+  text-decoration: underline;
+}
+
+#scrollUp {
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1000;
+  transition: opacity 0.3s;
+  height: 70px;
+  width: 70px;
+  font-size: 30px;
+  border-radius: 20px;
+  background-color: var(--secondary-color);
+  border: none;
+}
+
+footer {
+  background-color: var(--background-footer); /* Primary color */
+  color: var(--white-color);
+  padding: 20px;
+  text-align: center;
+  margin-top: 60px;
+}
+
+footer h2 {
+  margin-bottom: 20px;
+}
+
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
+  margin: auto;
+}
+
+#contact-form input,
+#contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+#contact-form textarea {
+  height: 100px; /* Set height for textarea */
+}
+
+#contact-form button {
+  background-color: var(--primary-color); /* Button background */
+  color: var(--white-color); /* Button text color */
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  width: 30%;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+#contact-form button:hover {
+  background-color: var(--hover-color); /* Change background on hover */
+}
+
+@keyframes appearleft {
+  from {
+    opacity: 0;
+    scale: 0.5;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+@keyframes appearright {
+  from {
+    opacity: 0;
+    transform: translateX(500px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+.left {
+  animation: appearleft 2s linear;
+}
+.right {
+  animation: appearright 2s linear;
+}
+.toggle{
+  cursor: pointer;
+  font-size: 30px;
+  display: none;
+}
+@media (max-width: 920px) {
+  .nav-links {
+    display: none;
+  }
+  .nav-links a {
+    margin-top: 15px;
+  }
+  .toggle{
+    display: block;
+  }
+}
+.show {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
